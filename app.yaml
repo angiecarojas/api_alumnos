@@ -1,0 +1,16 @@
+# Copyright 2017, Google, Inc.
+# Licenciado bajo la Licencia Apache, Versión 2.0 (la "Licencia");
+# no puede usar este archivo excepto en cumplimiento de la Licencia.
+# Puede obtener una copia de la Licencia en
+# #
+#     http://www.apache.org/licenses/LICENSE-2.0
+# #
+# A menos que sea requerido por la ley aplicable o acordado por escrito, el software
+# distribuido bajo la Licencia se distribuye "TAL CUAL",
+# SIN GARANTÍAS O CONDICIONES DE NINGÚN TIPO, ya sea expresa o implícita.
+# Consulte la Licencia para conocer los permisos específicos de idioma y
+# limitaciones bajo la Licencia.
+
+# [START gae_quickstart_yaml]
+tiempo de ejecución : nodejs10
+# [END gae_quickstart_yaml]
