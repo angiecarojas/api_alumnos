@@ -1,0 +1,70 @@
+<% include partials/_header %>
+<style>body{background: #fafafa  !important; }</style>
+
+
+<div class="container">
+
+  <div class="row">
+    <!--FORM-->
+    <div class="col-md-5">
+      <div class="card">
+        <div class="card-body">
+          <form action="/add" method="post">
+            <div class="form-group">
+              <input class="form-control" type="text" name="Nombre" placeholder="Nombre">
+            </div>
+            <div class="form-group">
+              <input class="form-control" type="text" name="Apellido" placeholder="Apellido">
+            </div>
+            <div class="form-group">
+              <input class="form-control" type="text" name="Edad" placeholder="Edad">
+            </div>
+            <button class="btn btn-info offset-md-4" type="submit">
+              Añadir Alumno
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- LIST -->
+    <div class="col-md-7">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Codigo</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Edad</th>
+            <th>Operation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% for(var i=0; i < tasks.length; i++) { %>
+            <tr>
+              <td><%= i + 1%></td>
+              <td><%= tasks[i].Nombre %></td>
+              <td><%= tasks[i].Apellido %></td>
+              <td><strong><%= tasks[i].Edad %></strong></td>
+              <td>
+                <a
+                  class="<%= tasks[i].status ? 'btn btn-success' : 'btn btn-success'%>"
+                  href="/turn/<%= tasks[i]._id %>">Listo</a>
+                <a href="/delete/<%= tasks[i]._id %>"
+                  class="btn btn-danger">
+                  Borrar
+                </a>
+                <a href="/edit/<%= tasks[i]._id %>" class="btn btn-info">
+                  Editar
+                </a>
+              </td>
+            </tr>
+          <% } %>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+
+</div>
